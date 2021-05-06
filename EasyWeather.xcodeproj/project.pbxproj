@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04AAC95526448A9F00B0858B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AAC95426448A9F00B0858B /* NetworkManager.swift */; };
+		04AAC9572644900600B0858B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AAC9562644900600B0858B /* Constants.swift */; };
 		04D57BFB264363CF00AF483A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D57BFA264363CF00AF483A /* AppDelegate.swift */; };
 		04D57BFD264363CF00AF483A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D57BFC264363CF00AF483A /* SceneDelegate.swift */; };
 		04D57BFF264363CF00AF483A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D57BFE264363CF00AF483A /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04AAC95426448A9F00B0858B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		04AAC9562644900600B0858B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		04D57BF7264363CF00AF483A /* EasyWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D57BFA264363CF00AF483A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04D57BFC264363CF00AF483A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +71,7 @@
 		04D57C0E2643641700AF483A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				04AAC95426448A9F00B0858B /* NetworkManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -95,6 +100,7 @@
 				04D57BFC264363CF00AF483A /* SceneDelegate.swift */,
 				04D57C03264363CF00AF483A /* Assets.xcassets */,
 				04D57C08264363CF00AF483A /* Info.plist */,
+				04AAC9562644900600B0858B /* Constants.swift */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -169,6 +175,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04AAC9572644900600B0858B /* Constants.swift in Sources */,
+				04AAC95526448A9F00B0858B /* NetworkManager.swift in Sources */,
 				04D57BFF264363CF00AF483A /* ViewController.swift in Sources */,
 				04D57BFB264363CF00AF483A /* AppDelegate.swift in Sources */,
 				04D57BFD264363CF00AF483A /* SceneDelegate.swift in Sources */,

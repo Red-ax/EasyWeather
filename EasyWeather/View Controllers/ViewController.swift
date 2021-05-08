@@ -13,12 +13,15 @@ class ViewController: UIViewController {
     
     var alertButton = UIButton()
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         networkManager.fetchData(city: "Moscow")
         
         customElevents()
+
+        createConstraints()
         
     }
     
@@ -29,12 +32,11 @@ class ViewController: UIViewController {
         }
         
     }
+
     
     func customElevents() {
-        
-        alertButton = UIButton(frame: CGRect(x: Int(view.frame.size.width / 2 - 90), y: Int(view.frame.size.height / 2 - 30), width: 180, height: 60))
-        alertButton.frame.size.height = 60
-        alertButton.frame.size.width = 180
+
+        // alertButton
         alertButton.layer.cornerRadius = 8
         alertButton.backgroundColor = .systemBlue
         alertButton.setTitle("Hello", for: .normal)
@@ -45,6 +47,18 @@ class ViewController: UIViewController {
         alertButton.addTarget(self, action: #selector(serchPressed), for: .touchUpInside)
         
         view.addSubview(alertButton)
+
+        
+    }
+    
+    func createConstraints() {
+        
+        // alertButton
+        alertButton.translatesAutoresizingMaskIntoConstraints = false
+        alertButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        alertButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        alertButton.widthAnchor.constraint(equalToConstant: 180).isActive = true
+        alertButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
         
     }
 

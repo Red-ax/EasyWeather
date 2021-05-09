@@ -10,7 +10,7 @@ import UIKit
 
 extension ViewController {
     
-    func presentSerchAlertController(title: String?, message: String?, style: UIAlertController.Style, completionHandler: @escaping (String) -> Void) {
+    func presentSearchAlertController(title: String?, message: String?, style: UIAlertController.Style, completionHandler: @escaping (String) -> Void) {
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: style)
         

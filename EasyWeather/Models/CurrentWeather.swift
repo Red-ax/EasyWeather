@@ -1,5 +1,5 @@
 //
-//  Weather.swift
+//  CurrentWeather.swift
 //  EasyWeather
 //
 //  Created by mac on 10.05.2021.
@@ -7,56 +7,34 @@
 
 import Foundation
 
-struct Weather {
+struct CurrentWeather {
+    let cityName: String
+    let temperature: Double
+    var temperatureString: String {
+        return "\(Int(temperature.rounded()))"
+    }
+    let feelsLikeTemperature: Double
+    var feelsLikeTemperatureString: String {
+        return "\(Int(feelsLikeTemperature.rounded()))"
+    }
+    let conditionCode: Int
+    var systenIconeNameString: String {
+        switch conditionCode {
+        case 200...232: return "cloud.bolt.rain.fill"
+        case 300...321: return "cloud.drizzle.fill"
+        case 500...531: return "cloud.rain.fill"
+        case 600...622: return "cloud.snow.fill"
+        case 701...781: return "smoke.fill"
+        case 800: return "sun.max.fill"
+        case 801...804: return "cloud.fill"
+        default: return "nosign "
+        }
+    }
     
-    let coord: Coord
-    let weather: WeatherElement
-    let base: String
-    let main: Main
-    let visibility: Int
-    let wind: Wind
-    let clouds: Clouds
-    let dt: Int
-    let sys: Sys
-    let timezone: Int
-    let name: String
-    let cod: Int
-    
-}
-
-struct Coord {
-    let lon: Double
-    let lat: Double
-}
-
-struct WeatherElement {
-    let id: Int
-    let main: String
-    let description: String
-    let icon: String
-}
-
-struct Main {
-    let temp: Double
-    let feels_like: Double
-    let temp_min: Double
-    let temp_max: Double
-    let pressure: Int
-    let humidity: Int
-}
-
-struct Wind {
-    let speed: Int
-    let deg: Int
-}
-
-struct Clouds {
-    let all: Int
-}
-
-struct Sys {
-    let type: Int
-    let country: String
-    let sunrise: Int
-    let sunset: Int
+    init?(currentWeathyerData: CurrentWeatherData) {
+        cityName = currentWeathyerData.name
+        temperature = currentWeathyerData.main.temp
+        feelsLikeTemperature = currentWeathyerData.main.feelsLike
+        conditionCode = currentWeathyerData.weather.first!.id
+    }
 }

@@ -4,6 +4,10 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>We need your location data to provide weather information.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We need your location data to provide weather information.</string>
 	<key>CFBundleDisplayName</key>
 	<string>EasyWeather</string>
 	<key>CFBundleExecutable</key>

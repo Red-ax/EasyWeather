@@ -18,25 +18,25 @@ extension ViewController {
         view.backgroundColor = #colorLiteral(red: 0.1182275308, green: 0.1272262269, blue: 0.1407499593, alpha: 1)
         
         // weatherIconImageView
-        weatherIconImageView.image = UIImage(systemName: "cloud.bolt.rain.fill")
+        weatherIconImageView.image = UIImage(systemName: "nosign")
         weatherIconImageView.contentMode = .scaleAspectFit
         weatherIconImageView.tintColor = .white
         view.addSubview(weatherIconImageView)
         
         // temperatureLabel
-        temperatureLabel.text = "12"
+        temperatureLabel.text = "0°"
         temperatureLabel.textColor = .white
         temperatureLabel.font = UIFont.systemFont(ofSize: 64)
         view.addSubview(temperatureLabel)
         
         // feelsLikeTemperatureLabel
-        feelsLikeTemperatureLabel.text = "Feels like temperature 10"
+        feelsLikeTemperatureLabel.text = "Feels like temperature 0°"
         feelsLikeTemperatureLabel.textColor = .white
         feelsLikeTemperatureLabel.font = UIFont.systemFont(ofSize: 20)
         view.addSubview(feelsLikeTemperatureLabel)
         
         // cityLabel
-        cityLabel.text = "Ufa"
+        cityLabel.text = "Not city"
         cityLabel.textColor = .white
         cityLabel.font = UIFont.boldSystemFont(ofSize: 32)
         view.addSubview(cityLabel)
@@ -120,7 +120,7 @@ extension ViewController {
         
         // temperatureLabel
         temperatureLabel.translatesAutoresizingMaskIntoConstraints = false
-        temperatureLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        temperatureLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 15).isActive = true
         temperatureLabel.topAnchor.constraint(equalTo: weatherIconImageView.bottomAnchor, constant: 50).isActive = true
         
         // feelsLikeTemperatureLabel
